@@ -2,8 +2,9 @@
 New Relic Agent For Xamarin
 
 ## Installation
-The Agent to Instrument New Relic in Xamarin is available on a NuGet Package on http://nuget.org/  https://www.nuget.org/packages/NewRelicAgentForXamarin/. 
-Install via Manage Nuget Packages under the Tools menu for Windows and Projects menu on Mac.
+The Agent to Instrument New Relic in Xamarin is available on a NuGet Package called NewRelicAgentForXamarin https://www.nuget.org/packages/NewRelicAgentForXamarin/. 
+
+To start Install the NuGet Package via Manage Nuget Packages under the Tools menu for Windows and under the Projects menu on Mac.
 
 ### iOS:
 Open `AppDelegate.cs` and add the following to the top of the file:
