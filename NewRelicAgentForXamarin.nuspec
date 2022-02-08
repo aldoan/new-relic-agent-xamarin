@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>NewRelicAgentForXamarin</id>
+    <version>1.0.13</version>
+    <title>New Relic Agent For Xamarin</title>
+    <authors>DanielApps</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>http://github.com/aldoan/new-relic-agent-xamarin</projectUrl>
+    <description>New Relic Agent for Xamarin</description>
+    <releaseNotes>Creation of NuGet Package to Instrument New Relic on a Xamarin Project.</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+    <tags>NewRelic Xamarin Agent</tags>
+
+   <dependencies>
+        <group targetFramework="Xamarin.iOS1.0">
+            <dependency id="NewRelicXamariniOSDll" version="1.0.5" include="All" />
+        </group>
+
+       <group targetFramework="MonoAndroid10">
+            <dependency id="NewRelicXamarinAndroidDll" version="1.0.3" include="Compile,Build,Analyzers" />
+        </group>
+
+        <group targetFramework="NetStandard21">
+        </group>
+
+    </dependencies>
+  
+
+  </metadata>
+
+</package>
