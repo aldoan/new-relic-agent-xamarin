@@ -1,2 +1,37 @@
-# new-relic-agent-xamarin
+# New Relic Agent For Xamarin
 New Relic Agent For Xamarin
+
+## Installation
+The Agent to Instrument New Relic in Xamarin is available on a NuGet Package on http://nuget.org/  https://www.nuget.org/packages/NewRelicAgentForXamarin/. 
+Install via Manage Nuget Packages under the Tools menu for Windows and Projects menu on Mac.
+
+### iOS:
+Open `AppDelegate.cs` and add the following to the top of the file:
+
+```
+using NewRelicXamarin;
+```
+
+Next, inside the class AppDelegate you need to add the following to the `FinishedLaunching` function:
+
+```
+NRLogger.SetLogLevels((uint)NRLogLevels.All);
+NewRelicXamarin.NewRelic.StartWithApplicationToken("new_relic_license_key");
+```
+
+Make sure you replace the `new_relic_license_key` with your own. You can find your own license key by creating a Mobile app within the New Relic UI. Go to `Mobile` > `Add a new app` > Choose your platform > Give your App a name > Your license key is now visible lower down the page.
+
+
+### Android:
+In the MainActivity class or equivalent
+
+```
+var config = new NewRelicXamarin.Android.AgentConfiguration();
+config.ApplicationToken = "new_relic_license_key";
+NewRelicXamarin.Android.AndroidAgentImpl.Init(this, config);
+NewRelicXamarin.Android.Agent.Start();
+
+```
+
+Make sure you replace the `new_relic_license_key` with your own.
+
