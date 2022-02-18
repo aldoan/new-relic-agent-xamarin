@@ -69,7 +69,7 @@ NewRelicXamarin.Android.NewRelic.RecordBreadcrumb(breadcrumbName, attributes);
 
 ## Crash Report
 
-###To use the crash event trail:
+### To use the crash event trail:
 
 Go to [one.newrelic.com](https://one.newrelic.com) > Mobile > (select a mobile app) > Crash analysis.
 
