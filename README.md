@@ -36,3 +36,17 @@ NewRelicXamarin.Android.Agent.Start();
 
 Make sure you replace the `new_relic_license_key` with your own.
 
+
+## Custom Events with Attributes
+
+For sending Custom events we use the method `RecordCustomEvent` included in the package, sending as parameters an event name and optionally we can send custom Attributes:
+
+```
+NewRelicXamarin.NewRelic.RecordCustomEvent(eventType, attributes);
+
+```
+
+## BreadCrumbs
+
+
+## Crash Report

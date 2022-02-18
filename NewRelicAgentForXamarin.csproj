@@ -37,15 +37,16 @@
     <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, NewRelicAgentForXamarin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     
     <Title>NewRelicAgentForXamarin Plugin for Xamarin and Windows</Title>
     <Summary>Summary of nuget</Summary>
     <Description>Plugin Description</Description>
     
     
-    <Owners>YOU</Owners>
-    <Authors>YOU</Authors>
-    <Copyright>Copyright 2019</Copyright>
+    <Owners>DANIELAPPS</Owners>
+    <Authors>DANIELAPPS</Authors>
+    <Copyright>Copyright 2022</Copyright>
 
     <!--When built in 2019 will remove extra references on pack-->
     <DisableExtraReferences>true</DisableExtraReferences>
@@ -121,6 +122,11 @@
     <None Remove="NewRelicXamariniOSDll" />
     <None Remove="NewRelicAgentForXamarin.Android.dll" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
   <ItemGroup Condition="'$(TargetFramework)' == 'Xamarin.iOS10'">
     <PackageReference Include="NewRelicXamariniOSDll" Version="1.0.5" />
   </ItemGroup>
